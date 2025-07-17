@@ -12,10 +12,9 @@ const Navbar = () => {
         </Link>
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-          <li><Link to="/">Home</Link></li>
-          <li><a href="#treatment" className="hover:text-blue-500">Treatment</a></li>
-          <li><a href="#journey" className="hover:text-blue-500">Journey</a></li>
-          <li><a href="#testimonials" className="hover:text-blue-500">Testimonials</a></li>
+          <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
+          <li><Link to="/services" className="hover:text-blue-500">Services</Link></li>
+          <li><Link to="/products" className="hover:text-blue-500">Products</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
         {/* Mobile Hamburger */}
