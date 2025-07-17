@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import testimonialsData from "../data/testimonialsData";
 
 const TestimonialsSection = () => {
+  const [current, setCurrent] = useState(0);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const visibleTestimonials = isMobile ? [testimonialsData[current]] : testimonialsData;
+
+  const next = () => setCurrent((prev) => (prev + 1) % testimonialsData.length);
+  const prev = () => setCurrent((prev) => (prev - 1 + testimonialsData.length) % testimonialsData.length);
+
   return (
     <section className="relative py-20 bg-gradient-to-br from-white to-green-50 overflow-hidden">
       {/* Decorative background waves */}
@@ -20,11 +27,11 @@ const TestimonialsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fade-in-up">Testimonials</h2>
           <p className="text-lg text-gray-600 animate-fade-in-up delay-100">If you are looking for a treatment that gives guaranteed results, look no further. MAICAT brings to you a <span className="text-green-600 font-semibold">life-changing experience</span>.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          {testimonialsData.map((t, i) => (
+        <div className={`grid ${isMobile ? '' : 'grid-cols-1 md:grid-cols-3'} gap-8 mt-8 items-center justify-center`}>
+          {visibleTestimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-white border border-green-200 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up"
+              className="bg-white border border-green-200 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in-up max-w-md mx-auto"
               style={{ animationDelay: `${i * 0.15 + 0.2}s` }}
             >
               <img
@@ -33,11 +40,17 @@ const TestimonialsSection = () => {
                 className="w-20 h-20 rounded-full object-cover border-4 border-green-200 shadow-md mb-4 transition-transform duration-500 hover:scale-110"
               />
               <h4 className="text-xl font-bold text-blue-800 mb-1">{t.name}</h4>
-              <p className="text-green-600 font-medium mb-3">({t.title})</p>
+              <p className="text-green-600 font-medium mb-3">{t.title}</p>
               <p className="text-gray-700 text-base leading-relaxed">“{t.testimonial}”</p>
             </div>
           ))}
         </div>
+        {isMobile && testimonialsData.length > 1 && (
+          <div className="flex justify-center gap-4 mt-8">
+            <button onClick={prev} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-bold text-lg hover:bg-blue-200 transition">&larr;</button>
+            <button onClick={next} className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-bold text-lg hover:bg-blue-200 transition">&rarr;</button>
+          </div>
+        )}
       </div>
     </section>
   );

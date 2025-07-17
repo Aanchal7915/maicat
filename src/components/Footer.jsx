@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0">
         {/* Logo and Description */}
         <div className="flex-1 min-w-[180px] flex flex-col items-start mb-6 md:mb-0">
-          <img src="/logo.png" alt="MAICAT Logo" className="w-16 h-16 mb-2" />
+          <img src="/logo512.png" alt="MAICAT Logo" className="w-16 h-16 mb-2" />
           <span className="font-bold text-blue-800 text-lg mb-1">MAICAT</span>
           <p className="text-sm text-gray-600 max-w-xs">MAICAT is the clinic which offers medical treatments to stop medication by removing the root cause of the diseases.</p>
         </div>
@@ -16,12 +16,12 @@ const Footer = () => {
         <div className="flex-1 min-w-[150px] mb-6 md:mb-0">
           <h4 className="font-semibold text-blue-800 mb-2">Useful Links</h4>
           <ul className="space-y-1 text-sm">
-            <li><a href="#" className="hover:text-blue-600 transition">Home</a></li>
-            <li><a href="#" className="hover:text-blue-600 transition">Services</a></li>
-            <li><a href="#" className="hover:text-blue-600 transition">Refund & Returns</a></li>
-            <li><a href="#" className="hover:text-blue-600 transition">Terms and Conditions</a></li>
-            <li><a href="#" className="hover:text-blue-600 transition">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-blue-600 transition">Blogs</a></li>
+            <li><button type="button" className="hover:text-blue-600 transition bg-transparent p-0 m-0 border-none cursor-pointer">Home</button></li>
+            <li><button type="button" className="hover:text-blue-600 transition bg-transparent p-0 m-0 border-none cursor-pointer">Services</button></li>
+            <li><button type="button" className="hover:text-blue-600 transition bg-transparent p-0 m-0 border-none cursor-pointer">Refund & Returns</button></li>
+            <li><button type="button" className="hover:text-blue-600 transition bg-transparent p-0 m-0 border-none cursor-pointer">Terms and Conditions</button></li>
+            <li><button type="button" className="hover:text-blue-600 transition bg-transparent p-0 m-0 border-none cursor-pointer">Privacy Policy</button></li>
+            <li><button type="button" className="hover:text-blue-600 transition bg-transparent p-0 m-0 border-none cursor-pointer">Blogs</button></li>
           </ul>
         </div>
         {/* Information */}
@@ -38,9 +38,9 @@ const Footer = () => {
         <div className="flex-1 min-w-[180px] flex flex-col items-start">
           <h4 className="font-semibold text-blue-800 mb-2">Follow Us</h4>
           <div className="flex gap-3 mb-4">
-            <a href="#" className="text-gray-500 hover:text-blue-600 text-xl"><FaFacebook /></a>
-            <a href="#" className="text-gray-500 hover:text-pink-500 text-xl"><FaInstagram /></a>
-            <a href="#" className="text-gray-500 hover:text-red-600 text-xl"><FaYoutube /></a>
+            <button type="button" className="text-gray-500 hover:text-blue-600 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaFacebook /></button>
+            <button type="button" className="text-gray-500 hover:text-pink-500 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaInstagram /></button>
+            <button type="button" className="text-gray-500 hover:text-red-600 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaYoutube /></button>
           </div>
           <button className="px-4 py-2 bg-blue-900 text-white rounded shadow hover:bg-blue-700 transition text-sm font-semibold">Book an appointment now</button>
         </div>

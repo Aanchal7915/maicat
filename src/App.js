@@ -1,10 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
-import TreatmentSection from './components/TreatmentSection';
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Home from "./pages/Home";
