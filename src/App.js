@@ -1,25 +1,33 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import TreatmentSection from './components/TreatmentSection';
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Products from "./pages/Products";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
       <main className="pt-16">
-        <HeroSection />
-        
-
-<TreatmentSection />
-
-        {/* Add more sections like Treatment, Journey here */}
-        <Testimonials />
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </Router>
   );
 }
 
