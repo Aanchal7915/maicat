@@ -39,20 +39,16 @@ const ServiceDetail = () => {
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-cyan-50 min-h-screen py-10 px-2 md:px-6 lg:px-0">
-      <div className="max-w-6xl mx-auto bg-white/90 rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden animate-fade-in-up border border-blue-100">
-        {/* Left: Icon, Tagline, Image, Video */}
-        <div className="md:w-1/2 flex flex-col items-center justify-center bg-gradient-to-br from-blue-100 to-cyan-100 p-6 md:p-10 gap-6 border-b md:border-b-0 md:border-r border-blue-100 relative">
-          <div className="flex flex-col items-center w-full">
-            <div className="text-6xl md:text-7xl mb-2 animate-bounce-slow drop-shadow-lg">{icon}</div>
-            {tagline && <div className="text-blue-800 font-bold text-lg md:text-xl mb-4 text-center px-2">{tagline}</div>}
-          </div>
+      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden animate-fade-in-up border border-blue-100 flex flex-col md:flex-row">
+        {/* Left: Banner Image, Video, Icon/Tagline, FAQs */}
+        <div className="md:w-1/2 flex flex-col items-center justify-start bg-gradient-to-br from-blue-100 to-cyan-100 p-0 md:p-8 gap-6 border-b md:border-b-0 md:border-r border-blue-100 min-h-[500px]">
           {service.image && (
-            <div className="w-full h-48 md:h-56 rounded-2xl overflow-hidden shadow-lg mb-2 bg-white/60">
+            <div className="w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-lg mb-4 mt-6 md:mt-0">
               <img src={service.image} alt={service.title} className="object-cover w-full h-full" />
             </div>
           )}
           {service.videoLink && (
-            <div className="w-full max-w-lg aspect-video rounded-xl overflow-hidden shadow-lg bg-white/60">
+            <div className="w-full max-w-lg aspect-video rounded-xl overflow-hidden shadow-lg bg-white/60 mb-4">
               <iframe
                 src={service.videoLink.replace("watch?v=", "embed/")}
                 title={service.title}
@@ -63,17 +59,25 @@ const ServiceDetail = () => {
               ></iframe>
             </div>
           )}
+          <div className="flex flex-col items-center w-full mb-4">
+            <div className="text-5xl md:text-6xl mb-2 animate-bounce-slow drop-shadow-lg">{icon}</div>
+            {tagline && <div className="text-blue-800 font-bold text-base md:text-lg mb-2 text-center px-2">{tagline}</div>}
+          </div>
           {service.videoLink && (
             <button
-              className="mt-4 px-6 py-2 bg-blue-700 text-white rounded-lg font-semibold shadow hover:bg-blue-900 transition text-base"
+              className="px-6 py-2 bg-blue-700 text-white rounded-lg font-semibold shadow hover:bg-blue-900 transition text-base"
               onClick={() => setVideoOpen(true)}
             >
               Watch Video (Full Screen)
             </button>
           )}
+          {/* FAQs in left column for desktop, below for mobile */}
+          <div className="hidden md:block w-full mt-8">
+            <FAQs faqs={faqs} />
+          </div>
         </div>
-        {/* Right: Content */}
-        <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+        {/* Right: Main Content */}
+        <div className="md:w-1/2 flex flex-col justify-center p-6 md:p-10">
           <h1 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4 text-center md:text-left">{service.title}</h1>
           <p className="text-gray-700 text-lg mb-6 text-center md:text-left">{service.description}</p>
           <h2 className="text-xl font-semibold text-blue-800 mb-3 mt-6">How We Cure</h2>
@@ -85,7 +89,10 @@ const ServiceDetail = () => {
           <div className="flex flex-col md:flex-row gap-4 mb-8 justify-center md:justify-start items-center">
             <button className="px-8 py-3 bg-green-500 text-white rounded-lg font-semibold shadow hover:bg-green-600 transition text-lg w-full md:w-auto">Book Appointment</button>
           </div>
-          <FAQs faqs={faqs} />
+          {/* FAQs for mobile */}
+          <div className="block md:hidden w-full mt-8">
+            <FAQs faqs={faqs} />
+          </div>
         </div>
       </div>
       {/* Video Modal */}

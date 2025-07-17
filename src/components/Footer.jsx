@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0">
         {/* Logo and Description */}
         <div className="flex-1 min-w-[180px] flex flex-col items-start mb-6 md:mb-0">
-          <img src="/logo512.png" alt="MAICAT Logo" className="w-16 h-16 mb-2" />
+          <img src="/logo.png" alt="MAICAT Logo" className="w-16 h-16 mb-2" />
           <span className="font-bold text-blue-800 text-lg mb-1">MAICAT</span>
           <p className="text-sm text-gray-600 max-w-xs">MAICAT is the clinic which offers medical treatments to stop medication by removing the root cause of the diseases.</p>
         </div>

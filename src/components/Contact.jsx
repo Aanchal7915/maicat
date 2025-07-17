@@ -67,9 +67,9 @@ const Contact = () => {
             <input type="text" placeholder="Treatment You Want*" className="w-full px-4 py-3 rounded-lg border border-indigo-200 focus:ring-2 focus:ring-indigo-400 transition font-medium" required />
             <textarea placeholder="Your Query*" className="w-full px-4 py-3 rounded-lg border border-indigo-200 focus:ring-2 focus:ring-indigo-400 transition font-medium" rows={3} required></textarea>
             <button type="submit" className="w-full py-3 bg-indigo-600 text-white rounded-full shadow-lg hover:scale-105 hover:bg-indigo-700 transition-all duration-300 font-semibold text-lg tracking-wide mt-2">Book an appointment</button>
-          </form>
-        </div>
-      </section>
+        </form>
+      </div>
+    </section>
 
       {/* Call to Action Bar */}
       <div className="w-full bg-indigo-900 py-6 flex flex-col md:flex-row items-center justify-between px-6 mt-auto rounded-t-3xl shadow-lg">

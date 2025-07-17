@@ -3,5 +3,5 @@ const contactInfo = {
   email: "query@maicat.org",
   phone: "+91-9870123450"
 };
-
+ 
 export default contactInfo; 
