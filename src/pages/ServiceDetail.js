@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import servicesData from "../data/servicesData";
 import FAQs from "../components/FAQs";
+import contactInfo from '../data/contactInfo';
 
 const iconMap = {
   "module-weight-loss": "🍏",
@@ -87,7 +88,7 @@ const ServiceDetail = () => {
             ))}
           </ul>
           <div className="flex flex-col md:flex-row gap-4 mb-8 justify-center md:justify-start items-center">
-            <button className="px-8 py-3 bg-green-500 text-white rounded-lg font-semibold shadow hover:bg-green-600 transition text-lg w-full md:w-auto">Book Appointment</button>
+            <button className="px-8 py-3 bg-green-500 text-white rounded-lg font-semibold shadow hover:bg-green-600 transition text-lg w-full md:w-auto" onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20MAICAT.`, '_blank')}>Book Appointment</button>
           </div>
           {/* FAQs for mobile */}
           <div className="block md:hidden w-full mt-8">

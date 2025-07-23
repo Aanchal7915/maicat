@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 pt-8 pb-2 px-4 md:px-12 text-gray-700">
+    <footer className="bg-white border-t border-gray-200 pt-8 pb-2 px-4 md:px-12 text-gray-700 mt-10">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 md:gap-0">
         {/* Logo and Description */}
         <div className="flex-1 min-w-[180px] flex flex-col items-start mb-6 md:mb-0">
@@ -35,14 +35,14 @@ const Footer = () => {
           </ul>
         </div>
         {/* Social & CTA */}
-        <div className="flex-1 min-w-[180px] flex flex-col items-start">
+        <div className="flex-1 min-w-[180px] flex flex-col items-start md:pl-2">
           <h4 className="font-semibold text-blue-800 mb-2">Follow Us</h4>
           <div className="flex gap-3 mb-4">
-            <button type="button" className="text-gray-500 hover:text-blue-600 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaFacebook /></button>
-            <button type="button" className="text-gray-500 hover:text-pink-500 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaInstagram /></button>
-            <button type="button" className="text-gray-500 hover:text-red-600 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaYoutube /></button>
+            <a href="https://www.facebook.com/maicat.org.health" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaFacebook /></a>
+            <a href="https://www.instagram.com/maicat.org.health" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-500 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaInstagram /></a>
+            <a href="https://www.youtube.com/channel/UCEcuwgI4xJ1WP2EB5UZthpQ" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-600 text-xl bg-transparent p-0 m-0 border-none cursor-pointer"><FaYoutube /></a>
           </div>
-          <button className="px-4 py-2 bg-blue-900 text-white rounded shadow hover:bg-blue-700 transition text-sm font-semibold">Book an appointment now</button>
+          <button className="px-4 py-2 bg-blue-900 text-white rounded shadow hover:bg-blue-700 transition text-sm font-semibold" onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20MAICAT.`, '_blank')}>Book an appointment now</button>
         </div>
       </div>
       <div className="border-t border-gray-200 mt-6 pt-2 text-xs text-gray-500 text-center">Copyright © 2024 MAICAT Health.</div>

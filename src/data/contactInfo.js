@@ -1,7 +1,8 @@
 const contactInfo = {
-  address: "B4-63, C3, Ground Floor, New Delhi, India",
+  address: "R 45 Ground  Floor, GK-1, Delhi- 110048, India",
   email: "query@maicat.org",
-  phone: "+91-9870123450"
+  phone: "+91-8076762599",
+  whatsapp: "918076762599"
 };
  
 export default contactInfo; 

@@ -51,12 +51,12 @@ const HealthJourneySection = () => {
                   {card.title}
                 </h3>
                 <p className="text-gray-700 text-base mb-6 flex-1">{card.desc}</p>
-                <button
+                {/* <button
                   className="mt-auto px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full shadow-lg font-semibold text-lg tracking-wide transition-all duration-300 hover:scale-105 hover:from-cyan-500 hover:to-blue-600 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-blue-400 animate-fade-in"
                   onClick={e => { e.stopPropagation(); handleCardClick(card.videoUrl, card.title); }}
                 >
                   {card.btn}
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

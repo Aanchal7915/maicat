@@ -20,7 +20,7 @@ const healthJourneyData = [
     videoUrl: "https://www.youtube.com/watch?v=fk4t37giPHU"
   },
   {
-    image: "https://images.unsplash.com/photo-1511174511562-5f97f4f4e0c8?auto=format&fit=crop&w=800&q=80", // Diabetes, doctor, clinic
+    image: "/assets/db.jpeg", // Diabetes, doctor, clinic
     title: "Type-2 Diabetes in reality is a “Lifestyle Disease”",
     desc: "Taking medicines to manage your Diabetes is not the correct treatment approach if you wish to reverse your Diabetes. Medicines can give you temporary relief, but in reality it is taking you closer to Heart attack, kidney failure, Brain stroke or even Cancer.",
     btn: "LEARN MORE",
