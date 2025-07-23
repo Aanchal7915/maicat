@@ -92,14 +92,14 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl mb-8 max-w-xl drop-shadow-md">
           The Science of Stopping Medicine
           </p>
-          <div className="space-x-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <button 
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl shadow-lg transition duration-300"
+            className="max-w-[200px] bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl shadow-lg transition duration-300"
             onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20MAICAT.`, '_blank')}
             >
               Book Appointment
             </button>
-            <Link to="/contact" className="bg-white text-blue-700 px-6 py-3 rounded-2xl shadow-lg hover:bg-gray-100 transition duration-300">
+            <Link to="/contact" className="max-w-[200px] text-center bg-white text-blue-700 px-6 py-3 rounded-2xl shadow-lg hover:bg-gray-100 transition duration-300">
               Contact Us
             </Link>
           </div>
